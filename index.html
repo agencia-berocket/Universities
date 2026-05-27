@@ -1433,7 +1433,6 @@
   background: rgba(255, 255, 255, 0.4);
   border-radius: 4px;
 }
-
 .placeholder-label {
   font-family: 'Source Serif 4', serif;
   font-style: italic;
@@ -1443,6 +1442,43 @@
   text-align: center;
   letter-spacing: 0;
   padding: 0 12px;
+}
+
+/* ===== AJUSTES MOBILE ADICIONAIS ===== */
+@media (max-width: 768px) {
+  /* 1 - Prevenir rolagem/jogo lateral */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 2 - Ocultar itens específicos no cabeçalho */
+  .nav-links a:not(.nav-cta) {
+    display: none !important;
+  }
+  
+  .nav-links {
+    gap: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* 3 - Alinhar o formulário principal para não estourar lateralmente */
+  .sign-form {
+    grid-template-columns: 1fr !important;
+    padding: 0 8px !important;
+    gap: 12px !important;
+  }
+  
+  .sign-form input {
+    width: 100% !important;
+  }
 }
 
   </style>
