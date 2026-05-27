@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Data Savings Act | Sign The Act</title>
+<meta name="description" content="You trained for a career. Your career trained an AI. Sign the Data Savings Act.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300..700&family=Geist:wght@300..700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --paper-soft: #F4F1E8;
+    --paper-line: #E8E3D4;
+    --ink: #14181F;
+    --ink-soft: #4A4F58;
+    --ink-mute: #8B8F96;
+    --burgundy: #7E2424;
+    --burgundy-dark: #5C1818;
+    --coral: #E54B2A;
+    --coral-dark: #C2391C;
+    --coral-soft: rgba(229, 75, 42, 0.08);
+    --forest: #1F4736;
+    --line: rgba(20, 24, 31, 0.10);
+    --line-strong: rgba(20, 24, 31, 0.22);
+    --serif: 'Source Serif 4', 'Times New Roman', serif;
+    --sans: 'Geist', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--coral); color: var(--paper); }
+
+  /* ===== NAV ===== */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-mark {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--coral);
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  .nav-links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--coral); }
+  .nav-cta {
+    background: var(--coral);
+    color: var(--paper) !important;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover {
+    background: var(--coral-dark);
+    color: var(--paper) !important;
+  }
+
+  /* ===== LAYOUT ===== */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  section { position: relative; padding: 96px 0; }
+
+  /* ===== EYEBROW ===== */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--coral);
+  }
+
+  /* ===== TYPOGRAPHY ===== */
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.018em;
+  }
+
+  .h-display {
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.04;
+    font-weight: 400;
+    font-variation-settings: "opsz" 60;
+  }
+  .h-display .accent {
+    color: var(--burgundy);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .h-sub {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.25;
+    color: var(--ink-soft);
+    font-weight: 400;
+    margin-top: 14px;
+    font-variation-settings: "opsz" 32;
+  }
+  .h-section {
+    font-size: clamp(32px, 4.4vw, 50px);
+    line-height: 1.08;
+    font-weight: 400;
+    font-variation-settings: "opsz" 48;
+  }
+  .h-section .accent {
+    color: var(--burgundy);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .lede {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-top: 28px;
+    font-weight: 400;
+  }
+  .lede + .lede { margin-top: 18px; }
+  .lede strong { color: var(--ink); font-weight: 600; }
+
+  /* ===== BUTTONS ===== */
+  .btn-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .btn-primary {
+    background: var(--coral);
+    color: var(--paper);
+  }
+  .btn-primary:hover {
+    background: var(--coral-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px -10px rgba(229, 75, 42, 0.5);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+  }
+  .btn-ghost:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .btn .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 15px;
+  }
+  .btn:hover .arrow { transform: translate(2px, -2px); }
+
+  /* Section-end CTA */
+  .section-cta {
+    margin-top: 56px;
+    text-align: center;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding-top: 96px;
+    padding-bottom: 110px;
+    background:
+      radial-gradient(ellipse 70% 60% at 88% 18%, rgba(229, 75, 42, 0.07), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 8% 82%, rgba(126, 36, 36, 0.05), transparent 60%),
+      var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-inner .eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-inner .h-sub {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+  }
+  .hero-inner .lede {
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-inner .btn-row {
+    justify-content: center;
+  }
+
+  /* ===== PROPOSAL ===== */
+  .proposal {
+    background: var(--paper-soft);
+    border-top: 1px solid var(--paper-line);
+    border-bottom: 1px solid var(--paper-line);
+  }
+  .proposal-inner { max-width: 760px; }
+
+  /* ===== UBI COMPARISON ===== */
+  .ubi { background: var(--paper); }
+  .ubi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 48px;
+    max-width: 1000px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .ubi-card {
+    padding: 36px 32px;
+    background: var(--paper);
+    position: relative;
+  }
+  .ubi-card:first-child {
+    border-right: 1px solid var(--line);
+  }
+  .ubi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+  .ubi-card.ubi-left::before { background: var(--burgundy); }
+  .ubi-card.ubi-right::before { background: var(--forest); }
+
+  .ubi-card-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  .ubi-card.ubi-left .ubi-card-label {
+    background: rgba(126, 36, 36, 0.08);
+    color: var(--burgundy);
+  }
+  .ubi-card.ubi-right .ubi-card-label {
+    background: rgba(31, 71, 54, 0.08);
+    color: var(--forest);
+  }
+  .ubi-card h3 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 28;
+  }
+  .ubi-card.ubi-left h3 { color: var(--burgundy); }
+  .ubi-card.ubi-right h3 { color: var(--forest); }
+  .ubi-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .ubi-card p:last-child { margin-bottom: 0; }
+  @media (max-width: 760px) {
+    .ubi-grid { grid-template-columns: 1fr; }
+    .ubi-card:first-child {
+      border-right: none;
+      border-bottom: 1px solid var(--line);
+    }
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    background: var(--paper-soft);
+    border-top: 1px solid var(--paper-line);
+    border-bottom: 1px solid var(--paper-line);
+    text-align: center;
+  }
+  .timeline-header { max-width: 720px; margin: 0 auto; }
+  .timeline-header .eyebrow { margin-left: auto; margin-right: auto; }
+  .timeline-track {
+    margin-top: 64px;
+    position: relative;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--paper-line);
+  }
+  .timeline-step {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 56px;
+    position: relative;
+  }
+  .timeline-step:last-child { margin-bottom: 0; }
+  .timeline-step-dot {
+    grid-column: 2;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--paper-soft);
+    border: 1.5px solid var(--coral);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .timeline-step-dot::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: var(--coral);
+    border-radius: 50%;
+  }
+  .timeline-step-content { text-align: center; }
+  .timeline-step:nth-child(odd) .timeline-step-content { grid-column: 1; text-align: right; }
+  .timeline-step:nth-child(even) .timeline-step-content { grid-column: 3; text-align: left; }
+  .timeline-step-num {
+    font-family: var(--serif);
+    font-style: normal;
+    font-size: 13px;
+    color: var(--coral);
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .timeline-step h4 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 8px;
+    font-variation-settings: "opsz" 28;
+  }
+  .timeline-step p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  @media (max-width: 680px) {
+    .timeline-track::before { left: 20px; }
+    .timeline-step { grid-template-columns: 40px 1fr; }
+    .timeline-step-dot { grid-column: 1; }
+    .timeline-step:nth-child(odd) .timeline-step-content,
+    .timeline-step:nth-child(even) .timeline-step-content {
+      grid-column: 2;
+      text-align: left;
+    }
+  }
+
+  /* ===== SIGN DECLARATION ===== */
+  .sign {
+    background: var(--paper);
+    text-align: center;
+  }
+  .sign-inner { max-width: 640px; margin: 0 auto; }
+  .sign-inner .eyebrow { margin-left: auto; margin-right: auto; }
+  .sign h2 {
+    font-size: clamp(34px, 4.2vw, 46px);
+    line-height: 1.1;
+    font-weight: 500;
+    font-variation-settings: "opsz" 44;
+  }
+  .sign-sub {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-top: 18px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sign-share-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 44px auto 0;
+    max-width: 540px;
+  }
+  .sign-share-img {
+    aspect-ratio: 1.91 / 1;
+    border-radius: 6px;
+    background: var(--paper-soft);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--paper-line);
+    box-shadow: 0 6px 14px -8px rgba(20, 24, 31, 0.2);
+    transition: transform 0.25s;
+  }
+  .sign-share-img:hover { transform: translateY(-2px); }
+  .sign-share-1 {
+    background-image: url('https://datasavingsact.drumwave.com/assets/img/share-option-1.jpg');
+  }
+  .sign-share-2 {
+    background-image: url('https://datasavingsact.drumwave.com/assets/img/share-option-2.jpg');
+  }
+  .sign-share-caption {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .sign-quote {
+    background: var(--paper-soft);
+    border-left: 3px solid var(--coral);
+    border-radius: 0 8px 8px 0;
+    padding: 24px 28px;
+    margin: 44px auto 36px;
+    max-width: 580px;
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink);
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    font-variation-settings: "opsz" 20;
+  }
+  .sign-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .sign-form input {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color 0.2s;
+  }
+  .sign-form input::placeholder { color: var(--ink-mute); }
+  .sign-form input:focus {
+    outline: none;
+    border-color: var(--coral);
+  }
+  .sign-form button {
+    grid-column: 1 / -1;
+    background: var(--coral);
+    color: var(--paper);
+    border: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .sign-form button:hover {
+    background: var(--coral-dark);
+    transform: translateY(-1px);
+  }
+  .sign-fine {
+    font-size: 13px;
+    color: var(--ink-mute);
+    line-height: 1.5;
+    margin-top: 22px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ===== STUDENT ORGS ===== */
+  .orgs {
+    background: var(--paper-soft);
+    border-top: 1px solid var(--paper-line);
+    border-bottom: 1px solid var(--paper-line);
+  }
+  .orgs-sub {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+  .orgs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 40px;
+  }
+  .org-card {
+    background: var(--paper);
+    border: 1px solid var(--paper-line);
+    border-radius: 8px;
+    padding: 26px 24px;
+    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+  }
+  .org-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--coral);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+    border-radius: 8px 8px 0 0;
+  }
+  .org-card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -16px rgba(20, 24, 31, 0.18);
+  }
+  .org-card:hover::before { transform: scaleX(1); }
+  .org-card h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--ink);
+    font-variation-settings: "opsz" 24;
+  }
+  .org-card p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .orgs-cta {
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--paper-line);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .orgs-cta-text {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 460px;
+  }
+  @media (max-width: 760px) {
+    .orgs-grid { grid-template-columns: 1fr; }
+    .orgs-cta { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  /* ===== FINAL CTA ===== */
+  .final {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .final::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(229, 75, 42, 0.22), transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(31, 71, 54, 0.15), transparent 50%);
+    pointer-events: none;
+  }
+  .final-inner { position: relative; z-index: 2; }
+  .final h2 {
+    font-size: clamp(32px, 4.2vw, 46px);
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--paper);
+    font-variation-settings: "opsz" 44;
+  }
+  .final h2 .accent {
+    color: var(--coral);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .final-sub {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 14px;
+  }
+  .final .btn-primary {
+    margin-top: 30px;
+    background: var(--coral);
+    color: var(--paper);
+  }
+  .final .btn-primary:hover {
+    background: var(--coral-dark);
+    color: var(--paper);
+    box-shadow: 0 14px 32px -10px rgba(229, 75, 42, 0.5);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 36px 0;
+    text-align: center;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .footer-links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--coral); }
+  .footer-meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.02em;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://datasavingsact.drumwave.com/v2.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>The Data Savings Act</span>
+    </a>
+    <div class="nav-links">
+      <a href="#proposal">The Proposal</a>
+      <a href="#orgs">For Orgs</a>
+      <a href="#sign" class="nav-cta">Add my name</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner reveal">
+      <div class="eyebrow">signtheact.datareserve.org</div>
+      <h1 class="h-display">
+        You trained for a <span class="accent">career.</span><br>
+        Your career trained an <span class="accent">AI.</span>
+      </h1>
+      <p class="h-sub">Guess which one has a job.</p>
+      <p class="lede">
+        AI is reshaping the job market faster than any institution is responding.
+        Creative, writing, coding, and analytic roles are being impacted first,
+        and some billionaires are advocating to just write us a check. We think
+        you deserve more than a handout. You deserve ownership in the new
+        economy driven by AI because you've contributed to it.
+      </p>
+      <div class="btn-row">
+        <a href="#sign" class="btn btn-primary">
+          Add my name <span class="arrow">↗</span>
+        </a>
+        <a href="https://datasavingsact.drumwave.com/Docs/Data_Savings_Act_Proposal.pdf" class="btn btn-ghost">
+          Read the Act <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROPOSAL ===== -->
+<section id="proposal" class="proposal">
+  <div class="container">
+    <div class="proposal-inner reveal">
+      <div class="eyebrow">The Proposal</div>
+      <h2 class="h-section">
+        If AI learns from you, <span class="accent">it owes you.</span>
+      </h2>
+      <p class="lede">
+        Right now, your data flows to platforms and AI models for free. Every
+        assignment you upload, every search you run, every route you drive.
+        It all trains systems worth trillions. But, you don't see a dime. Then
+        you pay a subscription to access the product your data helped build.
+      </p>
+      <p class="lede">
+        The Data Savings Act changes that. It establishes that
+        <strong>your data is a financial asset you own</strong>, held in a
+        personal Data Savings Account that compounds over time. Think of it
+        like a pension for the future. The digital footprint you leave
+        contributes both to AI's future and your own financial future.
+      </p>
+      <p class="lede">
+        This isn't anti-AI. It's pro-participation. Every AI system on Earth
+        requires continuous streams of human-generated data to function.
+        <strong>People aren't a problem to be subsidized. People are the
+        asset AI is built on.</strong> The Act ensures everyone who
+        contributes enjoys the upside.
+      </p>
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="#sign" class="btn btn-primary">
+        Add my name <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UBI COMPARISON ===== -->
+<section class="ubi">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Why not UBI?</div>
+      <h2 class="h-section" style="max-width: 880px;">
+        The mainstream answer is Universal Basic Income.
+        Here's why we disagree.
+      </h2>
+    </div>
+
+    <div class="ubi-grid reveal">
+      <div class="ubi-card ubi-left">
+        <span class="ubi-card-label">The Subsidy Path</span>
+        <h3>UBI</h3>
+        <p>
+          "Tax the rich and send everyone a check." It's a compassionate
+          idea built on a defeatist premise: that human economic
+          contribution is obsolete.
+        </p>
+        <p>
+          It makes you a recipient. It says your value ended. The
+          government will take care of it from here.
+        </p>
+      </div>
+
+      <div class="ubi-card ubi-right">
+        <span class="ubi-card-label">The Ownership Path</span>
+        <h3>Data Savings</h3>
+        <p>
+          Your data has real economic value. The Act turns that value into
+          a compounding asset in an account you control, not a check that
+          someone else decides to send.
+        </p>
+        <p>
+          It makes you an owner. It says your contribution is ongoing,
+          growing, and yours.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="#sign" class="btn btn-primary">
+        Add my name <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="timeline">
+  <div class="container">
+    <div class="timeline-header reveal">
+      <div class="eyebrow">From signature to statute</div>
+      <h2 class="h-section">
+        How a name on a list becomes <span class="accent">federal law.</span>
+      </h2>
+    </div>
+
+    <div class="timeline-track reveal">
+      <div class="timeline-step">
+        <div class="timeline-step-dot"></div>
+        <div class="timeline-step-content">
+          <span class="timeline-step-num">Step 01</span>
+          <h4>You sign.</h4>
+          <p>Your name enters the petition on the public record.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-step-dot"></div>
+        <div class="timeline-step-content">
+          <span class="timeline-step-num">Step 02</span>
+          <h4>Your org joins.</h4>
+          <p>Student organizations co-sign and circulate the petition.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-step-dot"></div>
+        <div class="timeline-step-content">
+          <span class="timeline-step-num">Step 03</span>
+          <h4>The Act is delivered.</h4>
+          <p>July 4, 2026. The petition is delivered to Congress in person.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-step-dot"></div>
+        <div class="timeline-step-content">
+          <span class="timeline-step-num">Step 04</span>
+          <h4>The economy reopens.</h4>
+          <p>Your data becomes a financial asset you own.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="#sign" class="btn btn-primary">
+        Add my name <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIGN DECLARATION ===== -->
+<section class="sign" id="sign">
+  <div class="container">
+    <div class="sign-inner reveal">
+      <div class="eyebrow">Sign the Declaration</div>
+      <h2>Your name goes to Congress this July.</h2>
+      <p class="sign-sub">
+        We're delivering the petition in person. We want real student voices
+        being heard instead of consultants and lobbyists. You have the most
+        to gain, or lose, by what policymakers do.
+      </p>
+
+      <div class="sign-share-row">
+        <div class="sign-share-img sign-share-1"></div>
+        <div class="sign-share-img sign-share-2"></div>
+      </div>
+      <p class="sign-share-caption">Share the petition with your network</p>
+
+      <div class="sign-quote">
+        "I claim my right to own the data I produce. If AI profits from my
+        contribution, that contribution is an asset, and it's mine. Add my
+        name to the public record in support of the Data Savings Act."
+      </div>
+
+      <form class="sign-form" onsubmit="event.preventDefault(); this.querySelector('button').innerHTML='Signature Recorded ✓'; this.querySelector('button').disabled=true;">
+        <input type="text" placeholder="First name" required>
+        <input type="text" placeholder="Last name" required>
+        <input type="text" placeholder="Zip code" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">
+          Add my name <span class="arrow">↗</span>
+        </button>
+      </form>
+
+      <p class="sign-fine">
+        We practice what we preach. Your data is used only for this campaign.
+        We don't sell it, share it, or train AI on it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STUDENT ORGS ===== -->
+<section class="orgs" id="orgs">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">For Student Organizations</div>
+      <h2 class="h-section">Get your org involved.</h2>
+      <p class="orgs-sub">Here is how you can take action:</p>
+    </div>
+
+    <div class="orgs-grid reveal">
+      <div class="org-card">
+        <h3>Co-sign as an org</h3>
+        <p>
+          Add your name to the petition and share it with your members.
+          Get listed as an official backer.
+        </p>
+      </div>
+      <div class="org-card">
+        <h3>Host an info table</h3>
+        <p>
+          We send the materials: flyers, QR codes, talking points. You
+          pick the event.
+        </p>
+      </div>
+      <div class="org-card">
+        <h3>Link in your newsletter</h3>
+        <p>
+          One URL in your next send: SignTheAct.DataReserve.org
+        </p>
+      </div>
+    </div>
+
+    <div class="orgs-cta reveal">
+      <a href="#sign" class="btn btn-primary">
+        Become a co-sponsor <span class="arrow">↗</span>
+      </a>
+      <p class="orgs-cta-text">
+        Co-sponsors get listed as official backers, early access to the
+        policy framework, and an invitation to the July listening session.
+      </p>
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="#sign" class="btn btn-primary">
+        Add my name <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final">
+  <div class="container">
+    <div class="final-inner reveal">
+      <h2>
+        Open for signature until <span class="accent">July 4, 2026.</span>
+      </h2>
+      <p class="final-sub">
+        Delivered to Congress in person. Your name on the record.
+      </p>
+      <a href="#sign" class="btn btn-primary">
+        Add my name <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://datasavingsact.drumwave.com/v2.html">The Data Savings Act</a>
+      <a href="https://datasavingsact.drumwave.com/Docs/Data_Savings_Act_Proposal.pdf">Read the Act</a>
+      <a href="https://datasavingsact.drumwave.com/privacy-policy.html">Privacy</a>
+    </div>
+    <p class="footer-meta">
+      Open for signature · 2026
+    </p>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
