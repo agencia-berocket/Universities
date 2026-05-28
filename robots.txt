@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://signtheact.datareserve.org/sitemap.xml
